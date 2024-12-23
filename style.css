@@ -1,3 +1,41 @@
 .ast-on-card-button.ast-select-options-trigger {
   display: none !important;
 }
+
+a.ws-button button {
+  background-color: #25D366;
+  transition: background-color 0.3s ease; 
+}
+
+a.ws-button button:hover {
+  background-color: #1DA851;
+}
+
+.woocommerce ul.products li.product {
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 15px !important;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+}
+
+.woocommerce ul.products li.product:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.woocommerce ul.products li.product .ast-woo-product-category {
+  color: #74a84a !important;
+  /* font-weight: bold; */
+  opacity: 0.8 !important;
+}
+
+.woocommerce ul.products li.product .woocommerce-loop-product__title {
+  color: #000;
+  font-weight: bold;
+  font-family: 'Arial', sans-serif;
+}
+
+.woocommerce ul.products li.product .attachment-woocommerce_thumbnail {
+  border-radius: 10px;
+}
