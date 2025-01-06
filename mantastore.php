@@ -14,13 +14,6 @@ if (!defined('ABSPATH')) {
   exit;
 }
 
-// Agregar un mensaje en el pie de página
-
-add_action('wp_footer', function() {
-  $current_year = date('Y');
-  echo '<p style="text-align: center; font-size: small;">Manta Store - ' . $current_year . '</p>';
-});
-
 // Registrar y encolar el archivo CSS
 function mi_plugin_enqueue_styles() {
   wp_enqueue_style(
