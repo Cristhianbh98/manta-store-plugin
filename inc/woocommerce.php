@@ -3,24 +3,16 @@
 class WC_Custom {
   function __construct() {
     add_action('woocommerce_single_product_summary', array($this, 'add_ws_button'), 25);
-    add_action('template_redirect', array($this, 'redirect_search_to_products'));
+    add_action('get_search_form', array($this, 'add_post_type_to_search_form'));
   }
 
-  function redirect_search_to_products() {
-    if (is_search() && !is_admin()) {
-      $search_query = get_query_var('s');
-      
-      $redirect_url = add_query_arg(
-          array(
-              's' => urlencode($search_query), 
-              'post_type' => 'product'
-          ),
-          home_url('/')
-      );
-
-      wp_redirect($redirect_url);
-      exit;
-  }
+  function add_post_type_to_search_form($form) {
+    $form = str_replace(
+      '</form>',
+      '<input type="hidden" name="post_type" value="product" /></form>',
+      $form
+    );
+    return $form;
   }
 }
 
