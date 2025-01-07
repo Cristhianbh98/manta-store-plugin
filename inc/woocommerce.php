@@ -2,7 +2,7 @@
 
 class WC_Custom {
   function __construct() {
-    add_action('woocommerce_single_product_summary', array($this, 'add_ws_button'), 25);
+    add_filter('woocommerce_is_purchasable', '__return_false');
     add_action('template_redirect', array($this, 'redirect_search_if_no_post_type'));
   }
 
@@ -16,6 +16,7 @@ class WC_Custom {
             's' => urlencode($search_query),
             'post_type' => 'product'
           ),
+          
           home_url('/')
         );
 
