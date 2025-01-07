@@ -29,3 +29,4 @@ add_action('wp_enqueue_scripts', 'mi_plugin_enqueue_styles');
 
 // Inclues
 require_once plugin_dir_path(__FILE__) . 'inc/woocommerce.php';
+require_once plugin_dir_path(__FILE__) . 'inc/shortcodes.php';
