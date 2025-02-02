@@ -30,9 +30,26 @@ a.ws-button button:hover {
   transition: all 0.3s ease;
 }
 
-.woocommerce ul.products li.product .astra-shop-thumbnail-wrap .attachment-woocommerce_thumbnail {
+.woocommerce ul.products li.product .astra-shop-thumbnail-wrap .woocommerce-LoopProduct-link {
   border: 2px solid #eaeaea;
   border-radius: 5px;
+  overflow: hidden;
+}
+
+.woocommerce ul.products li.product .astra-shop-thumbnail-wrap .attachment-woocommerce_thumbnail {
+  transition: transform 0.2s ease;
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 5px;
+  overflow: hidden;
+  object-fit: cover;
+  object-position: center;
+  margin: 0;
+}
+
+.woocommerce ul.products li.product:hover .astra-shop-thumbnail-wrap .attachment-woocommerce_thumbnail {
+  transform: scale(1.15);
 }
 
 .woocommerce ul.products li.product h2.woocommerce-loop-product__title:hover {
