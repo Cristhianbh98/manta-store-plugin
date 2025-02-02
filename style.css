@@ -58,10 +58,11 @@ a.ws-button button:hover {
 }
 
 .woocommerce ul.products li.product .price {
+  margin-top: .8rem;
   text-align: center;
 }
 
 .woocommerce ul.products li.product .price .amount {
-  color: #000;
+  color: #0063f8;
   font-weight: bold;
 }
