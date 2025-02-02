@@ -30,8 +30,14 @@ a.ws-button button:hover {
   transition: all 0.3s ease;
 }
 
+.woocommerce ul.products li.product .astra-shop-thumbnail-wrap .attachment-woocommerce_thumbnail {
+  border: 2px solid #eaeaea;
+  border-radius: 5px;
+}
+
 .woocommerce ul.products li.product h2.woocommerce-loop-product__title:hover {
   color: #0063f8;
+  text-decoration: underline;
 }
 
 .woocommerce ul.products li.product .price {
